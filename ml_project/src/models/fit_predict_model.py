@@ -5,7 +5,8 @@ import pandas as pd
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score, accuracy_score, f1_score
-from ml_project.entities.train_params import TrainParams
+
+from entities import TrainParams
 
 
 def train(features: pd.DataFrame, target: pd.Series,

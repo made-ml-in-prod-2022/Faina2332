@@ -6,10 +6,10 @@ from marshmallow_dataclass import class_schema
 
 @dataclass()
 class PredictPipelineParams:
-    """ Defines ml_project and data predict pipeline path. """
+    """ Defines src and data predict pipeline path. """
     input_data_path: str
-    output_data_path: str
-    pipeline_path: str
+    predict_path: str
+    transformer_path: str
     model_path: str
 
 

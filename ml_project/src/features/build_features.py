@@ -5,8 +5,6 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
-from ml_project.entities.feature_params import FeatureParams
-
 
 def cat_features_pipeline() -> Pipeline:
     imputer = SimpleImputer(missing_values=np.nan, strategy="most_frequent")
@@ -33,7 +31,7 @@ def num_features_pipeline() -> Pipeline:
     return pipeline
 
 
-def column_transformer(params: FeatureParams) -> ColumnTransformer:
+def column_transformer(params) -> ColumnTransformer:
     transformer = ColumnTransformer(
         [
             (
@@ -51,5 +49,5 @@ def column_transformer(params: FeatureParams) -> ColumnTransformer:
     return transformer
 
 
-def extract_target(df: pd.DataFrame, params: FeatureParams) -> pd.Series:
+def extract_target(df: pd.DataFrame, params) -> pd.Series:
     return df[params.target_col]

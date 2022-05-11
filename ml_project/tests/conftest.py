@@ -5,9 +5,9 @@ from typing import List, Tuple
 
 import pandas as pd
 
-from ml_project.entities import FeatureParams, TrainParams, TrainPipelineParams, SplitParams, PredictPipelineParams
-from ml_project.features import column_transformer, extract_target
-from ml_project.train_pipeline import train_pipeline
+from src.entities import FeatureParams, TrainParams, TrainPipelineParams, SplitParams, PredictPipelineParams
+from src.features import column_transformer, extract_target
+from src.train_pipeline import train_pipeline
 
 N_ROWS = 300
 
@@ -165,13 +165,13 @@ def predict_pipeline_params(
 ) -> PredictPipelineParams:
     pred_pipeline_params = PredictPipelineParams(
         input_data_path=fake_data_path,
-        output_data_path=output_predictions_path,
-        pipeline_path=load_transformer_path,
+        predict_path=output_predictions_path,
+        transformer_path=load_transformer_path,
         model_path=load_model_path,
     )
     return pred_pipeline_params
 
 
 @pytest.fixture(scope="package")
-def train_on_fake_data(train_pipeline_params: TrainPipelineParams):
-    train_pipeline(train_pipeline_params)
+def train_on_fake_data(config_path: str):
+    train_pipeline(config_path)

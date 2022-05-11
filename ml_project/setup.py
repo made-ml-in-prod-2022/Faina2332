@@ -6,10 +6,10 @@ with open('requirements.txt') as f:
 
 
 setup(
-    name='ml_project',
+    name='src',
     packages=find_packages(),
     version='0.1.0',
-    description='Homework#1: ml_project',
+    description='Homework#1: src',
     author='Alimbaeva Faina',
     license='MIT',
     install_requires=required,

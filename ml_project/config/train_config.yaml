@@ -1,8 +1,9 @@
 input_data_path: "data/raw/heart_cleveland_upload.csv"
-output_model_path: "models/ml_project.pkl"
-metric_path: "models/metrics.json"
-output_folder: "data/raw/"
-split_params:
+output_model_path: "models/model.pkl"
+metrics_path: "models/metrics.json"
+output_folder: "data/predict"
+output_transformer_path: "models/transformer.pkl"
+splitting_params:
   val_size: 0.2
   random_state: 42
 train_params:
