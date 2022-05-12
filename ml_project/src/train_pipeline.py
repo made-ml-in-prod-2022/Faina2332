@@ -5,12 +5,12 @@ from typing import Dict
 import pandas as pd
 import click
 
+from ml_project.src.data import split_train_val_data
+from ml_project.src.entities import TrainPipelineParams, read_train_pipeline_params
+from ml_project.src.features import extract_target, column_transformer
+from ml_project.src.models import train, predict, evaluate
+from ml_project.src.utils import read_data, save_metrics_json, save_pkl
 
-from data import split_train_val_data
-from features import extract_target, column_transformer
-from models import train, predict, evaluate
-from entities import TrainPipelineParams, read_train_pipeline_params
-from utils import read_data, save_metrics_json, save_pkl
 
 logger = logging.getLogger(__name__)
 handler = logging.StreamHandler(sys.stdout)
@@ -26,21 +26,22 @@ def train_pipeline(config_path: str) -> Dict[str, float]:
     logger.info("Data loading")
     data = read_data(train_pipeline_params.input_data_path)
     train_data, val_data = split_train_val_data(data, train_pipeline_params.splitting_params)
+    train_features, train_target = extract_target(train_data, train_pipeline_params.feature_params)
 
     logger.info("Preprocessing data")
     transformer = column_transformer(train_pipeline_params.feature_params)
-    transformer.fit(train_data)
+    transformer.fit(train_features)
     save_pkl(transformer, train_pipeline_params.output_transformer_path)
 
-    train_features = pd.DataFrame(transformer.transform(train_data))
-    train_target = extract_target(train_data, train_pipeline_params.feature_params)
+    train_features = pd.DataFrame(transformer.transform(train_features))
 
     logger.info("Training model")
     model = train(train_features, train_target, train_pipeline_params.train_params)
 
     logger.info("Evaluating model")
-    val_features = pd.DataFrame(transformer.transform(val_data))
-    val_target = extract_target(val_data, train_pipeline_params.feature_params)
+
+    val_features, val_target = extract_target(val_data, train_pipeline_params.feature_params)
+    val_features = pd.DataFrame(transformer.transform(val_features))
     predictions = predict(model, val_features)
     metrics = evaluate(predictions, val_target)
     logger.info(f"Model scores: {metrics}")

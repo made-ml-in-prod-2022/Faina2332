@@ -4,10 +4,10 @@ import logging
 import pandas as pd
 import click
 
-from models import predict
-from utils import read_data, load_pkl
+from ml_project.src.entities import PredictPipelineParams, read_predict_pipeline_params
+from ml_project.src.models import predict
+from ml_project.src.utils import read_data, load_pkl
 
-from entities import PredictPipelineParams, PredictPipelineParamsSchema, read_predict_pipeline_params
 
 logger = logging.getLogger(__name__)
 handler = logging.StreamHandler(sys.stdout)

@@ -4,7 +4,7 @@ from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
-
+from typing import Tuple
 
 def cat_features_pipeline() -> Pipeline:
     imputer = SimpleImputer(missing_values=np.nan, strategy="most_frequent")
@@ -49,5 +49,6 @@ def column_transformer(params) -> ColumnTransformer:
     return transformer
 
 
-def extract_target(df: pd.DataFrame, params) -> pd.Series:
-    return df[params.target_col]
+def extract_target(df: pd.DataFrame, params) -> Tuple[pd.DataFrame, pd.Series]:
+    return df.drop(params.target_col, axis=1), df[params.target_col]
+
