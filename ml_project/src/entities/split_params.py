@@ -5,4 +5,3 @@ from dataclasses import dataclass, field
 class SplitParams:
     val_size: float = field(default=0.2)
     random_state: int = field(default=42)
--m venv .venv
