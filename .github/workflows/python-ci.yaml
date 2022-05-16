@@ -5,9 +5,9 @@ name: Python package heart_cleveland
 
 on:
   push:
-    branches: [ homework1 ]
+    branches: [ homework1_fix ]
   pull_request:
-    branches: [ homework1 ]
+    branches: [ homework1_fix ]
 
 jobs:
   homework1:
