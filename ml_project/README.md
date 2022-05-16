@@ -18,6 +18,7 @@ Test:
 pytest tests/
 
 Project Organization
+
     ├── README.md          <- The top-level README for developers using this project.
     │
     ├── configs            <- Сonfiguration files
