@@ -4,8 +4,8 @@ import pandas as pd
 from typing import List, Tuple
 
 
-from ml_project.src.entities import FeatureParams, TrainParams
-from ml_project.src.features import column_transformer, extract_target
+from src.entities import FeatureParams, TrainParams
+from src.features import column_transformer, extract_target
 
 
 @pytest.fixture(scope="session")
