@@ -5,11 +5,11 @@ from typing import Dict
 import pandas as pd
 import click
 
-from src.data import split_train_val_data
-from src.entities import TrainPipelineParams, read_train_pipeline_params
-from src.features import extract_target, column_transformer
-from src.models import train, predict, evaluate
-from src.utils import read_data, save_metrics_json, save_pkl
+from ml_project.src.data import split_train_val_data
+from ml_project.src.entities import TrainPipelineParams, read_train_pipeline_params
+from ml_project.src.features import extract_target, column_transformer
+from ml_project.src.models import train, predict, evaluate
+from ml_project.src.utils import read_data, save_metrics_json, save_pkl
 
 
 logger = logging.getLogger(__name__)

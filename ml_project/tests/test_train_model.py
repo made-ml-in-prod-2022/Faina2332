@@ -3,8 +3,8 @@ from typing import NoReturn, Tuple
 
 from sklearn.ensemble import RandomForestClassifier
 
-from src.models import train
-from src.entities import TrainParams
+from ml_project.src.models import train
+from ml_project.src.entities import TrainParams
 
 
 def test_train_model(
