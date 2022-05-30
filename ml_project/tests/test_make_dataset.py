@@ -2,8 +2,8 @@ import pandas as pd
 
 from typing import NoReturn
 
-from ml_project.src.data import split_train_val_data
-from ml_project.src.entities import SplitParams
+from src.data import split_train_val_data
+from src.entities import SplitParams
 
 
 def test_split_train_val_data(fake_data: pd.DataFrame) -> NoReturn:
