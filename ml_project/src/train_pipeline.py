@@ -11,7 +11,6 @@ from src.features import extract_target, column_transformer
 from src.models import train, predict, evaluate
 from src.utils import read_data, save_metrics_json, save_pkl
 
-
 logger = logging.getLogger(__name__)
 handler = logging.StreamHandler(sys.stdout)
 logger.setLevel(logging.INFO)
