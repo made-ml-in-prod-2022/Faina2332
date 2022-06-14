@@ -1,1 +1,5 @@
-/pythonProject1/.venv/
+/.venv/
+/.pytest_cache/
+/online_inference/
+/ml_project/.idea/
+/ml_project/.pytest_cache/
