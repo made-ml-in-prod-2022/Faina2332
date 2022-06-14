@@ -22,12 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d71a5e70-f382-4a59-a76e-4d59f678a7a1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/activate" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/activate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/Scripts/activate.bat" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Scripts/activate.bat" afterDir="false" />
-    </list>
+    <list default="true" id="d71a5e70-f382-4a59-a76e-4d59f678a7a1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,6 +103,42 @@
       <option name="presentableId" value="Default" />
       <updated>1652244786278</updated>
     </task>
+    <task id="LOCAL-00001" summary="deleted venv">
+      <created>1655202964732</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655202964732</updated>
+    </task>
+    <task id="LOCAL-00002" summary="deleted venv">
+      <created>1655203358191</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655203358191</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Removed waste folders">
+      <created>1655203884538</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655203884538</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Removed waste folders">
+      <created>1655203907542</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655203907542</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Removed waste folders">
+      <created>1655204971679</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655204971679</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +154,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="deleted venv" />
+    <MESSAGE value="Removed waste folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed waste folders" />
   </component>
   <component name="WindowStateProjectService">
     <state x="3095" y="340" key="#Notifications" timestamp="1652264408534">
@@ -163,6 +196,14 @@
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
     <state width="1048" height="277" key="GridCell.Tab.0.right/0.0.1536.816/1920.0.1920.1032@1920.0.1920.1032" timestamp="1652353623251" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1655203207797">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.816@0.0.1536.816" timestamp="1655203207797" />
+    <state x="407" y="170" key="MultipleFileMergeDialog" timestamp="1655203207808">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="407" y="170" key="MultipleFileMergeDialog/0.0.1536.816@0.0.1536.816" timestamp="1655203207808" />
     <state x="2903" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1652340835910">
       <screen x="1920" y="0" width="1920" height="1032" />
     </state>
