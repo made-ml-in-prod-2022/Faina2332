@@ -3,4 +3,6 @@
 /online_inference/.idea/
 /online_inference/.venv/
 /online_inference/.pytest_cache/
+/online_inference/__pycache__/
 /.pytest_cache
+/.idea
