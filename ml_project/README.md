@@ -5,8 +5,8 @@ Dataset : https://www.kaggle.com/datasets/cherngs/heart-disease-cleveland-uci
 Installation:
 
 python -m venv .venv
-source .venv/Scripts/activate
-pip install -r requirements.txt
+.venv\Scripts\activate
+pip install -r ml_project\requirements.txt
 
 Usage:
 
