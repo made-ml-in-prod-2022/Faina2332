@@ -9,3 +9,4 @@
 /airflow_ml_dags/dags/__pycache__/
 /ml_project/.idea/
 /.idea/workspace.xml
+/kubernetes/.idea/

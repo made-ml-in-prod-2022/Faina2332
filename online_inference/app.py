@@ -2,6 +2,7 @@ import logging
 import os
 import pickle
 from typing import List, Optional
+import time
 
 import pandas as pd
 import uvicorn
@@ -16,7 +17,7 @@ logger.setLevel(logging.INFO)
 model = None
 transformer = None
 app = FastAPI()
-
+start_time = time.time()
 
 class HeartDiseaseModel(BaseModel):
     data: List[List[int]]
@@ -47,6 +48,7 @@ def load_object(path: str):
 @app.on_event("startup")
 def load_model():
     global model
+    time.sleep(20)
     model_path = os.getenv("PATH_TO_MODEL")
 
     if model_path is None:
@@ -70,6 +72,9 @@ def load_transformer():
 
 @app.get("/health")
 def health() -> bool:
+    global start_time
+    if time.time() - start_time >= 120:
+        raise RuntimeError("Application runtime limit exceeded.")
     return not (model is None)
 
 
