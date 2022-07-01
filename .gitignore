@@ -5,6 +5,9 @@
 /online_inference/__pycache__/
 /.pytest_cache
 /.idea
+/airflow_ml_dags/.idea/
+/airflow_ml_dags/dags/__pycache__/
+/ml_project/.idea/
+/.idea/workspace.xml
 /ml_project/.idea/
 /ml_project/.pytest_cache/
-
