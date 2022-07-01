@@ -1,4 +1,5 @@
 /.venv/
+
 /online_inference/.idea/
 /online_inference/.venv/
 /online_inference/.pytest_cache/
@@ -9,3 +10,5 @@
 /airflow_ml_dags/dags/__pycache__/
 /ml_project/.idea/
 /.idea/workspace.xml
+/ml_project/.pytest_cache/
+
