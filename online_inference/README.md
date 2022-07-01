@@ -36,10 +36,17 @@ docker run -p 8000:8000 fuzzy2332/online_inference:v1
 
 Make requests:
 ~~~
-python online_inference/make_request.py
+python make_request.py
 ~~~
 
 Tests:
 ~~~
 pytest
 ~~~
+
+Оптимизация размера docker image:
+
+* Выбрана легковесная версия базового образа (python:slim);
+* Установка пакетов через pip без cache (--no-cache-dir);
+
+В итоге образ занимает 548.68 MB
