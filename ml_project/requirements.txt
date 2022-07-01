@@ -1,0 +1,10 @@
+matplotlib
+marshmallow-dataclass
+faker
+Flask
+numpy
+pandas
+pyyaml
+scikit-learn
+click
+pytest

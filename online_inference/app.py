@@ -1,8 +1,8 @@
 import logging
 import os
 import pickle
-from typing import List, Optional
-import time
+from typing import List, Union
+
 
 import pandas as pd
 import uvicorn
@@ -11,6 +11,7 @@ from pydantic import BaseModel
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 
+from fastapi import HTTPException
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -34,13 +35,19 @@ def make_predict(
         model: RandomForestClassifier,
         transformer: ColumnTransformer,
 ) -> List[ModelResponse]:
+
+    if len(data) == 0:
+        raise HTTPException(
+            status_code=400, detail="Empty input"
+        )
+
     data = pd.DataFrame(data, columns=features)
     transfromed_data = pd.DataFrame(transformer.transform(data))
     predictions = model.predict(transfromed_data)
     return [ModelResponse(condition=int(disease)) for disease in predictions]
 
 
-def load_object(path: str):
+def load_object(path: str) -> Union[RandomForestClassifier, ColumnTransformer]:
     with open(path, "rb") as f:
         return pickle.load(f)
 

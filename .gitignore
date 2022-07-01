@@ -10,3 +10,5 @@
 /ml_project/.idea/
 /.idea/workspace.xml
 /kubernetes/.idea/
+/ml_project/.pytest_cache/
+
